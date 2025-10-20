@@ -1,0 +1,30 @@
+# -------------------------------
+# Root .gitignore for LibraryApp
+# -------------------------------
+
+# Node modules
+be/node_modules/
+fe/node_modules/
+
+# Environment variables
+be/.env
+fe/.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+fe/build/
+be/dist/
+
+# Vercel / Render / Deployment
+.vercel/
+.render/
