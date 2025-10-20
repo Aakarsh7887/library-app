@@ -12,7 +12,13 @@ dotenv.config();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+app.use(cors({
+    origin: "https://library-app-two-delta.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+}));
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/user",userRoute);
